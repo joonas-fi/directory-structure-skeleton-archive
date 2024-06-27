@@ -1,0 +1,20 @@
+{
+	"for_description_of_this_file_see": "https://github.com/function61/turbobob",
+	"version_major": 1,
+	"project_name": "directory-structure-skeleton-archive",
+	"project_emoji_icon": "",
+	"builders": [
+		{
+			"name": "default",
+			"uses": "docker://fn61/buildkit-golang:20240405_0714_856c11bd",
+			"commands": {
+				"build": ["build-go-project.sh", "--directory=cmd/directory-structure-skeleton-archive/", "--binary-basename=directory-structure-skeleton-archive"],
+				"dev": ["bash"]
+			},
+			"mount_destination": "/workspace"
+		}
+	],
+	"os_arches": {
+		"linux-amd64": true
+	}
+}
